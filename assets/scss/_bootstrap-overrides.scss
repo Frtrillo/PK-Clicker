@@ -1,0 +1,79 @@
+.bg-primary {
+    background-color: $primary !important;
+}
+
+.bg-secondary {
+    background-color: $secondary !important;
+}
+
+.text-primary {
+    color: $primary !important;
+}
+
+.text-secondary {
+    color: $secondary !important;
+}
+
+.border-primary {
+    border-color: $primary !important;
+}
+
+a {
+    color: $white;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $primary;
+    }
+}
+
+.btn-success {
+    background-color: $primary;
+    &:hover {
+        background-color: $darken;
+        border-color: $primary;
+        color: $primary;
+    }
+}
+
+.btn-outline-success{
+    color:$primary;
+    border-color: $primary;
+    &:hover {
+        background-color: $primary;
+        border-color: $primary;
+        color: white;
+    }
+}
+.modal-content{
+    width: unset;
+}
+.figure {
+    padding: 0;
+    .figure-content-img {
+        overflow: hidden;
+    }
+
+    img {
+        margin: 0;
+        transition: 0.3s ease-in-out; 
+    }
+    
+    img:hover {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+
+    .figure-caption {
+        background-color: $secondary !important;
+        h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            @include title-font;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 0;
+        }
+    }
+}
