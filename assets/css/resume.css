@@ -81,7 +81,7 @@ h6 {
   margin: 0;
   font-size: 18px;
   font-weight: 500;
-  color: #9195a2;
+  color: #50535E;
 }
 
 .section-with-bg {
@@ -128,6 +128,7 @@ a:hover, a:focus, a:active {
 
 .btn-success {
   background-color: #2ab09c;
+  border-color: white;
 }
 .btn-success:hover {
   background-color: #101522;
@@ -136,7 +137,7 @@ a:hover, a:focus, a:active {
 }
 
 .btn-outline-success {
-  color: #2ab09c;
+  color: white;
   border-color: #2ab09c;
 }
 .btn-outline-success:hover {
@@ -176,6 +177,10 @@ a:hover, a:focus, a:active {
   margin: 0;
 }
 
+.form-control {
+  border-color: #8e8e8e;
+}
+
 /*--------------------------------------------------------------
 # Estilos para barra de navegación
 --------------------------------------------------------------*/
@@ -209,6 +214,18 @@ a:hover, a:focus, a:active {
   padding: 0;
   margin: 0;
 }
+.footer button {
+  background: #2ab09c;
+  border: 0;
+  padding: 10px 40px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.footer button:hover {
+  background: #0d1223;
+}
 
 .credits {
   background-color: #101522;
@@ -228,7 +245,7 @@ a:hover, a:focus, a:active {
   font-size: 15px;
 }
 .contacto .form button {
-  background: #2ab09c;
+  background: #0d1223;
   border: 0;
   padding: 10px 40px;
   color: #fff;
@@ -264,6 +281,9 @@ a:hover, a:focus, a:active {
 /*--------------------------------------------------------------
 # Seccion Sobre nosotros
 --------------------------------------------------------------*/
+.nosotros .section-header .p {
+  color: #50535E;
+}
 .nosotros .personal {
   position: relative;
   overflow: hidden;
@@ -314,18 +334,23 @@ a:hover, a:focus, a:active {
 /*--------------------------------------------------------------
 # Seccion Recomendaciones Juegos y Series
 --------------------------------------------------------------*/
+.add_reco-list {
+  color: #000000;
+}
+
+.add_reco-list:hover {
+  color: #2AB09C;
+}
+
 .recomendaciones .recomendaciones-list {
   padding: 0;
   list-style: none;
 }
-
 .recomendaciones .recomendaciones-list li {
   border-bottom: 1px solid #ddd;
   padding-left: 25px;
 }
-
 .recomendaciones .recomendaciones-list a {
-  margin: 18px 0;
   display: block;
   position: relative;
   font-family: "Raleway", sans-serif;
@@ -338,26 +363,31 @@ a:hover, a:focus, a:active {
 .recomendaciones .recomendaciones-list a:hover {
   color: #2ab09c;
 }
-
+.recomendaciones .recomendaciones-list span {
+  display: block;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  padding-right: 20px;
+  color: #101522;
+}
 .recomendaciones .recomendaciones-list i {
   font-size: 24px;
   position: absolute;
   right: 0;
   padding-right: 20px;
 }
-
 .recomendaciones .recomendaciones-list p {
   margin-bottom: 20px;
 }
-
 .recomendaciones .recomendaciones-list a.collapse {
   color: #2ab09c;
 }
-
 .recomendaciones .recomendaciones-list a.collapsed {
   color: #000;
 }
-
 .recomendaciones .recomendaciones-list a.collapsed i::before {
   content: "" !important;
 }
@@ -655,9 +685,12 @@ Seccion Video
 # Video bootstrap Section
 --------------------------------------------------------------*/
 .video-container {
-  width: 640px;
-  height: 365px;
   position: relative;
+}
+
+.video-fluid {
+  width: 100%;
+  height: auto;
 }
 
 .video-controls {
@@ -705,6 +738,97 @@ Seccion Video
 
 .volume-bar {
   width: 60px;
+}
+
+/*--------------------------------------------------------------
+# Seccion Video
+--------------------------------------------------------------*/
+p.clasificacion {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 20px;
+}
+p.clasificacion span {
+  font-size: 18px;
+}
+p.clasificacion input {
+  position: absolute;
+  top: -100px;
+}
+p.clasificacion label {
+  float: right;
+  color: #333;
+}
+p.clasificacion label:hover {
+  color: #dd4;
+}
+p.clasificacion label:hover ~ label {
+  color: #dd4;
+}
+p.clasificacion input:checked ~ label {
+  color: #dd4;
+}
+
+/*--------------------------------------------------------------
+# Seccion Perfil (DATOS USUARIO)
+--------------------------------------------------------------*/
+.datos-usuario h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #0d1223;
+}
+.datos-usuario h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #101522;
+}
+.datos-usuario h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #0d1223;
+}
+.datos-usuario h4 span {
+  font-family: "Roboto", sans-serif;
+}
+.datos-usuario p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #0d1223;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: white !important;
+  height: 100px;
+  width: 100px;
+  outline: white;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-image: none;
+  opacity: 1 !important;
+}
+
+.carousel-control-next-icon:after {
+  content: ">";
+  position: relative;
+  top: 10px;
+  font-size: 55px;
+  color: black;
+}
+
+.carousel-control-prev-icon:after {
+  content: "<";
+  position: relative;
+  top: 10px;
+  font-size: 55px;
+  color: black;
 }
 
 /*# sourceMappingURL=resume.css.map */
